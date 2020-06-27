@@ -35,3 +35,12 @@ def integrate_func_vec(vec, var = None, start = None, end = None):
         for i in range(0, len(vec)):
             integrals = np.append(integrals, sym.integrate(vec[i], (var, start, end)))
         return integrals
+
+def gradient_vector(expression):
+    syms = [ symb for symb in expression.free_symbols ]
+    partials = np.array([])
+    
+    for i in range (0, len(syms)):
+        partials = np.append(partials, sym.diff(expression, syms[i]))
+
+    return partials          
