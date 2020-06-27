@@ -35,7 +35,11 @@ def integrate_func_vec(vec, var = None, start = None, end = None):
         for i in range(0, len(vec)):
             integrals = np.append(integrals, sym.integrate(vec[i], (var, start, end)))
         return integrals
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 836c351a71c87e430b2bf5836a44b3a616369255
 def gradient_vector(expression):
     syms = [ symb for symb in expression.free_symbols ]
     partials = np.array([])
@@ -43,4 +47,8 @@ def gradient_vector(expression):
     for i in range (0, len(syms)):
         partials = np.append(partials, sym.diff(expression, syms[i]))
 
+<<<<<<< HEAD
     return partials          
+=======
+    return partials    
+>>>>>>> 836c351a71c87e430b2bf5836a44b3a616369255
